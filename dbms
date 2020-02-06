@@ -1,0 +1,25 @@
+create table person(
+     driver_id varchar(30),
+     name varchar(30),
+     address varchar(30),
+     primary key(driver_id)
+     );
+     
+     
+ insert into person
+ values('A01','Richard','srinivas nagar'),('A02','Pradeep','rajaji nagar'),('A03','smith','ashok nagar'),('A04','venu','N R colony'),('A05','john','hanumanth nagar');
+ 
+ 
+ 
+  insert into owns
+    values('A01','KA052250'),('A02','KA053408'),('A03','KA031181'),('A04','KA095477'),('A05','KA041702');
+    
+    
+    
+    insert into accident
+    values('11','01-jan-03','mysore road'),('12','02-feb-04','south end circle'),('13','21-jan-03','bull temple road'),('14','17-feb-08','mysore road'),('15','4-mar-05','kanakpura road');
+    
+    
+    insert into participated
+    values('A01','KA052250',11,10000),('A02','KA053408',12,50000),('A03','KA095477',13,25000),('A04','KA031181',14,3000),('A05','KA041702',15,5000);
+    
