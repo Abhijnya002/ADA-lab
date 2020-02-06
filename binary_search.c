@@ -67,3 +67,20 @@ else {
 }
 	
 
+
+
+
+output:
+Enter the no of elements= 5
+Enter array elements=
+ 1
+1
+1
+2
+2
+Enter key= 1
+first time key occured at = 0
+last time key occured at= 2
+count is 3
+
+
