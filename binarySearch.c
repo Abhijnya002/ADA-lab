@@ -2,7 +2,7 @@
 
 int main()
 {
-	int a[100],n,key,l=-1,f=-1;
+	int a[100],n,key,l,f=0,first,last;
 	printf("Enter the no.of elements and the key=");
 	scanf("%d%d",&n,&key);
 	printf("Enter the sorted elements of the array=\n");
@@ -10,13 +10,15 @@ int main()
 	{
 		scanf("%d",&a[i]);
 	}
+	l=n-1;
 	while(f<=l)
 	{
 		
 		int mid=(f+l)/2;
+		printf("mid=%d\n",mid);
 		if(a[mid]==key)
 		{
-			f=mid;
+			first=mid;
 			l=mid-1;
 		}
 		else if(key>a[mid])
@@ -29,14 +31,14 @@ int main()
 		}
 		
 	}
-
+	f=0;l=n-1;
 	while(f<=l)
 	{
 		
 		int mid=(f+l)/2;
 		if(a[mid]==key)
 		{
-			l=mid;
+			last=mid;
 			f=mid+1;
 		}
 		else if(key>a[mid])
@@ -49,11 +51,11 @@ int main()
 		}
 		
 	}
-	if(f!=-1 && l!=-1 )
+	if(first!=-1 && last!=-1 )
 	{
-		printf("First occurrence = %d\n",f);
-		printf("Last occurrence = %d\n",l);
-		printf("Count =%d ",(l-f+1));
+		printf("First occurrence = %d\n",first);
+		printf("Last occurrence = %d\n",last);
+		printf("Count =%d ",(last-first+1));
 	}
 	else
 	{
