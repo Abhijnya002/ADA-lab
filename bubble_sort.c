@@ -45,3 +45,21 @@ void sort(int a[],int n)
 	
 }
 
+
+output:
+
+Enter size=5
+Enter array ele=
+6
+2
+4
+1
+5
+sorted array=
+1
+2
+4
+5
+6
+sort function took 0.000056 seconds to execute 
+
