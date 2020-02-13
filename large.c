@@ -57,3 +57,25 @@ void large(int a[],int n,int k)
 		printf("%d\n",a[i]);
 	}
 }
+
+
+output:
+Enter size=5
+Enter array ele=
+6
+7
+2
+3
+4
+sorted array=
+7
+6
+4
+3
+2
+enter k=3
+3th largest element is=4
+3 largest elements are=
+7
+6
+4
