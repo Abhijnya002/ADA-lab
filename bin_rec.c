@@ -1,6 +1,5 @@
-
 #include<stdio.h> 
-int recsearch(int a[],int f, int l, int x) ;
+int recsearch(int a[],int f, int l, int key) ;
 int recsearch(int a[], int f,int l, int key) 
 { 
   	
@@ -8,14 +7,14 @@ int recsearch(int a[], int f,int l, int key)
 	{
 	int mid=(f+l)/2;
 	if (a[mid]==key) 
-        	return 1; 
-     	if (a[mid] < key) 
+        	return mid; 
+     	if (a[mid] > key) 
      	return recsearch(a, f,mid-1,key);
-	if (a[mid] > key) 
+	else
      	return recsearch(a, mid+1,l,key); 
 	} 
+	return -1;
 } 
-  
 int main() 
 { 
     	int n,key,i;
