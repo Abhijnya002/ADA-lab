@@ -1,70 +1,69 @@
-#include<stdio.h>
+#include<iostream>
+using namespace std;
 
 int f=0;
 int r=-1;
-int a[20][20],q[20],visited[20],n,i,j;
+int a[20][20],q[20],visited[20],n,i,j,flag=0;
 void bfs(int v)
 {
-	
-	for(i=0;i<n;i++)
-	
-		if(a[v][i] && !visited[i])
-		
-			q[++(r)]=i;
-		
-	
-		if(f<=r)
-		{ 
-                 	visited[q[(f)]]=1; 
-                 	bfs(q[(f)++]); 
-                } 
+	int w;
+	visited[v]=1;
+	q[++r]=v;
+	while(f<=r)
+	{
+		v=q[f++];
+		for(w=1;w<=n;w++)
+		if((a[v][w]==1)&&(visited[w]==0))
+		{
+			visited[w]=1;
+			flag=1;
+			cout<<w<<" ";
+			q[++r]=w;
+		}
+	}
+			
 }
 int main()
 {
 	int v;
-	printf("Enter the no. of vertices=");
-	scanf("%d",&n);
+	cout<<"Enter the no. of vertices"<<endl;
+	cin>>n;
 	
 	
-	printf("Enter the adjacency matrix=\n");
-	for(i=0;i<n;i++)
+	cout<<"Enter the adjacency matrix"<<endl;
+	for(i=1;i<=n;i++)
 	{
-		for(j=0;j<n;j++)
+		for(j=1;j<=n;j++)
 		{
-			scanf("%d",&a[i][j]);
+			cin>>a[i][j];
 			
 		}
 	}
-	for(i=0;i<n;i++)
+	for(i=1;i<=n;i++)
 	{
-		q[i]=0;
+		
 		visited[i]=0;
 	}
-	printf("Enter the start vertex=");
+	cout<<"Enter the start vertex"<<endl;
 	
-	scanf("%d",&v);
+	cin>>v;
+	cout<<"ALl the nodes reachable from "<<v<<" are "<<endl;
 	bfs(v);
-	printf("ALl the nodes reachable from %d are= ",v);
-	for(i=0;i<n;i++)
-	{
-		if(visited[i])
-		{
-			printf("%d\t",i);
-		}
-	}
 	
+	if(flag==0)
+		cout<<"NO path"<<endl;
 	return 0;
 }
-/* output
-Enter the no. of vertices
-4
-Enter the adjacency matrix
-0 1 1 0
-0 0 0 1
-0 1 0 0
-0 0 0 0
-Enter the start vertex
-0
-ALl the nodes reachable from 0 are 
-1 2 3 
-*/
+
+/*output:
+Enter the no. of vertices=5                                                                                                         
+Enter the adjacency matrix=                                                                                                         
+0 1 1 0 1                                                                                                                           
+1 1 0 0 0                                                                                                                           
+0 1 0 1 0                                                                                                                           
+1 0 0 0 1                                                                                                                           
+0 0 0 1 0                                                                                                                           
+Enter the start vertex=2                                                                                                            
+ALl the nodes reachable from 2 are                                                                                                  
+ 1354   
+ /*
