@@ -1,5 +1,5 @@
-#include<iostream>
-using namespace std;
+#include<stdio.h>
+
 
 int f=0;
 int r=-1;
@@ -17,7 +17,7 @@ void bfs(int v)
 		{
 			visited[w]=1;
 			flag=1;
-			cout<<w<<" ";
+			printf("%d",w);
 			q[++r]=w;
 		}
 	}
@@ -26,16 +26,16 @@ void bfs(int v)
 int main()
 {
 	int v;
-	cout<<"Enter the no. of vertices"<<endl;
-	cin>>n;
+	printf("Enter the no. of vertices=");
+	scanf("%d",&n);
 	
 	
-	cout<<"Enter the adjacency matrix"<<endl;
+	printf("Enter the adjacency matrix=\n");
 	for(i=1;i<=n;i++)
 	{
 		for(j=1;j<=n;j++)
 		{
-			cin>>a[i][j];
+			scanf("%d",&a[i][j]);
 			
 		}
 	}
@@ -44,17 +44,16 @@ int main()
 		
 		visited[i]=0;
 	}
-	cout<<"Enter the start vertex"<<endl;
+	printf("Enter the start vertex=");
 	
-	cin>>v;
-	cout<<"ALl the nodes reachable from "<<v<<" are "<<endl;
+	scanf("%d",&v);
+	printf("ALl the nodes reachable from %d are\n ",v);
 	bfs(v);
 	
 	if(flag==0)
-		cout<<"NO path"<<endl;
+		printf("NO path\n");
 	return 0;
 }
-
 /*output:
 Enter the no. of vertices=5                                                                                                         
 Enter the adjacency matrix=                                                                                                         
