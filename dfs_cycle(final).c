@@ -7,9 +7,7 @@ int seq[20],s=0,connected=1,acyclic=1;
 
 
 void DFS();
-
 void DFSearch(int cur);
-
 int main() 
 {    
     int i,j;
@@ -27,7 +25,7 @@ int main()
     DFS();
 
     for(i=1;i<=n;i++)
-        printf("%c,%d\t",'a'+seq[i]-1,i);
+        printf("%c\t",'a'+seq[i]-1);
 
     if( acyclic) 
     printf(" \nAcyclic Graph!");
@@ -68,14 +66,13 @@ void DFSearch(int cur)
 Enter no of Vertices: 3                                                                                                         
                                                                                                                                 
 Enter the Adjacency Matrix(1/0):                                                                                                
-0 1 0                                                                                                                          
+0 1 0                                                                                                                           
 0 0 1                                                                                                                           
 1 0 0                                                                                                                           
                                                                                                                                 
 The Depth First Search Traversal:                                                                                               
-a,1     b,2     c,3    
-Cyclic Graph!  
-    
+b       c       a                                                                                                               
+ Cyclic Graph!           
     
     
     
@@ -84,8 +81,8 @@ Enter no of Vertices: 3
 Enter the Adjacency Matrix(1/0):                                                                                              
 0 1 0                                                                                                                         
 0 0 1                                                                                                                         
-0 0 0                                                                                                                         
+0 0 0                                                                                                                        
                                                                                                                               
 The Depth First Search Traversal:                                                                                             
-a,1     b,2     c,3                                                                                                           
+b       c       `                                                                                                             
 Acyclic Graph!        
