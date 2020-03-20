@@ -62,3 +62,30 @@ void DFSearch(int cur)
         if(A[cur][i] && !visited[i])
            DFSearch(i);
 }
+
+
+//output
+Enter no of Vertices: 3                                                                                                         
+                                                                                                                                
+Enter the Adjacency Matrix(1/0):                                                                                                
+0 1 0                                                                                                                          
+0 0 1                                                                                                                           
+1 0 0                                                                                                                           
+                                                                                                                                
+The Depth First Search Traversal:                                                                                               
+a,1     b,2     c,3    
+Cyclic Graph!  
+    
+    
+    
+    
+Enter no of Vertices: 3                                                                                                       
+                                                                                                                              
+Enter the Adjacency Matrix(1/0):                                                                                              
+0 1 0                                                                                                                         
+0 0 1                                                                                                                         
+0 0 0                                                                                                                         
+                                                                                                                              
+The Depth First Search Traversal:                                                                                             
+a,1     b,2     c,3                                                                                                           
+Acyclic Graph!        
