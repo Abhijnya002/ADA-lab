@@ -112,3 +112,47 @@ int main()
 		printf("%d",a[i]);
     return 0; 
 } 
+
+/* output
+Enter the size of the array
+15
+Sorted array is
+1
+1
+1
+2
+4
+5
+7
+8
+8
+9
+10
+10
+12
+12
+13
+anusree@anusree:~/Documents/ADA$ ./a.out
+Enter the size of the array
+6
+Sorted array is
+1
+1
+1
+3
+4
+5
+anusree@anusree:~/Documents/ADA$ ./a.out
+Enter the size of the array
+9
+Sorted array is
+0
+1
+1
+3
+5
+6
+7
+7
+7
+*/
