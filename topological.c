@@ -101,3 +101,15 @@ void main()
 
 o/p:
 Nodes after topological sorted order: 0 1       3       2    
+
+	
+	
+	
+{0, 0, 0, 0, 0, 0},
+   {0, 0, 0, 0, 0, 0},
+   {0, 0, 0, 1, 0, 0},
+   {0, 1, 0, 0, 0, 0},
+    {1, 1, 0, 0, 0, 0},
+    {1, 0, 1, 0, 0, 0},
+
+Nodes after topological sorted order: 5 4       2       3       1       0  
